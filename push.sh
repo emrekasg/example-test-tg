@@ -8,4 +8,4 @@ cd /Users/emrekasgur/Desktop/testgenie/v2/testgenie-runner
 
 bash build.sh  && bash run.sh
 
-cd here
+cd $here
