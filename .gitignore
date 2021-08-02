@@ -1,0 +1,4 @@
+/gemfile.lock
+.idea
+*.iml
+/output/
