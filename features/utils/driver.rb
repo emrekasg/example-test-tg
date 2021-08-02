@@ -1,4 +1,4 @@
-require_relative '../config/base_config'
+p#require_relative '../config/base_config'
 
 class Driver
   def self.get_driver
@@ -69,7 +69,7 @@ class Driver
       Capybara.register_driver :selenium do |app|
         Capybara::Selenium::Driver.new(app,
                                        browser: :remote,
-                                       url: "http://host.docker.internal:4445/wd/hub",
+                                       url: REMOTE_URL,
                                        options: options)
       end
     when 'remote-firefox'
@@ -80,7 +80,7 @@ class Driver
       Capybara.register_driver :selenium do |app|
         Capybara::Selenium::Driver.new(app,
                                        browser: :remote,
-                                       url: "host.docker.internal:4444",
+                                       url: REMOTE_URL,
                                        options: options)
       end
     end
