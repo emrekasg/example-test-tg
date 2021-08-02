@@ -69,7 +69,7 @@ class Driver
       Capybara.register_driver :selenium do |app|
         Capybara::Selenium::Driver.new(app,
                                        browser: :remote,
-                                       url: "http://localhost:4445/wd/hub",
+                                       url: "http://host.docker.internal:4445/wd/hub",
                                        options: options)
       end
     when 'remote-firefox'
